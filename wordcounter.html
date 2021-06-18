@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: antiquewhite;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-top: 50px;
+            color: rgb(181, 18, 245);
+        }
+
+        #textbox {
+            width: 800px;
+            height: 236px;
+            margin: 50px 6px 50px 367px;
+            font-size: 1.8rem;
+            padding: 20px;
+        }
+
+        .sentence {
+            text-align: center;
+            font-size: 2rem;
+            color: rgb(59, 233, 111);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>WORD COUNTER</h1>
+    <textarea id="textbox" cols="30" rows="10"></textarea><br>
+    <div class="sentence">
+        <span id="word">0</span> word and
+        <span id="char">0</span> characters
+    </div>
+
+    <script>
+        'use script';
+        let textbox = document.getElementById('textbox');
+        textbox.addEventListener('input', function(){
+            // for character 
+            let text = this.value;
+            let char = text.length;
+            document.getElementById('char').innerHTML = char;
+
+            // for word 
+            text = text.trim();
+             let word = text.split(" ");
+             let finalText = word.filter(function(elm){
+                return elm !="";
+             });
+             document.getElementById('word').innerHTML = finalText.length;
+        });
+
+        
+    </script>
+</body>
+
+</html>

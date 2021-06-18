@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="cel">Celcius</label>
+    <input type="number" name="cel" id="cel" value="0">
+    <label for="fah">Fahrenheit</label>
+    <input type="number" name="fah" id="fah" value="32">
+    <!-- <input type="submit" value="SUBMIT"> -->
+
+    <script>
+        'use strict';
+        let cel = document.getElementById('cel');
+        let fah = document.getElementById('fah');
+        let c,f;
+
+        cel.addEventListener('input', function(){
+            c = this.value;
+            // console.log(c);
+            f = (c * 9/5) + 32;
+            if(f<0){
+                fah.value = f.toFixed(4);
+            }else{
+            fah.value = f;
+            }
+            // console.log(f);
+        });
+
+        
+
+        fah.addEventListener('input', function(){
+            f = this.value;
+            c = (f - 32) * 5/9;
+            cel.value = c.toFixed(4);
+        });
+    </script>
+</body>
+</html>
+

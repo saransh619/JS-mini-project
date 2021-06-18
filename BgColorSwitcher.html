@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .btn {
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            border: 2px solid gray;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        p {
+            text-align: justify;
+            width: 50%;
+            margin: 0 auto;
+            /* margin-top: 30px; */
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3.6rem;
+        }
+
+        .switchColor {
+            text-align: right;
+            padding: 20px;
+            /* margin: 20px; */
+        }
+
+        #c1 {
+            background-color: white;
+        }
+
+        #c2 {
+            background-color: aquamarine;
+        }
+
+        #c3 {
+            background-color: #ce9aff;
+        }
+
+        #c4 {
+            background-color: black;
+        }
+
+        #myImg {
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="switchColor">
+        <span class="btn" id="c1" onclick="func('#ffffff')"></span>
+        <span class="btn" id="c2" onclick="func('#7fff44')"></span>
+        <span class="btn" id="c3" onclick="func('#ce9aff')"></span>
+        <span class="btn" id="c4" onclick="func('#000000')"></span>
+    </div>
+    <h1 class="text">Hello World</h1>
+    <img src="https://images.pexels.com/photos/539743/pexels-photo-539743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200&w=800"
+        id="myImg">
+    <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum impedit optio asperiores
+        exercitationem distinctio blanditiis aut beatae aliquam illo! Tempore, debitis sed non exercitationem, dolores
+        veniam asperiores repellendus eveniet error nesciunt eos? Consectetur dolor laudantium suscipit fugit maxime
+        accusantium ratione quia beatae aspernatur, optio laboriosam, dolorem impedit deleniti harum dolore quaerat
+        omnis debitis fuga. Tempore qui quod, architecto optio ab ut. Voluptas, magnam! Assumenda aperiam aliquam nisi,
+        exercitationem reprehenderit ducimus beatae libero porro aspernatur reiciendis impedit voluptate qui provident
+        dolor mollitia commodi quis dolore accusantium iure similique! Maxime veritatis fugiat cumque omnis perspiciatis
+        ipsum quasi mollitia ullam, porro cum necessitatibus nihil pariatur illo voluptatem eum earum dolorem blanditiis
+        quibusdam eius. Doloremque officiis consectetur saepe reiciendis laborum sit porro tenetur optio. Quasi animi
+        reprehenderit quod? Magni tempora quas consectetur facilis tempore soluta nemo? Natus architecto beatae aut.
+        Commodi, dolores modi ea autem et veniam debitis iusto, corrupti molestias fugit, ad suscipit labore esse
+        exercitationem aperiam iure ipsam temporibus. Eaque asperiores, omnis nostrum eligendi ab rerum modi nesciunt
+        facilis dolorum odit voluptates, nam assumenda cumque tempora quasi necessitatibus nulla, facere exercitationem
+        accusamus magnam? Enim expedita minus fugiat blanditiis fugit sequi, aliquam inventore eligendi magnam assumenda
+        animi iusto necessitatibus! Aspernatur, odio omnis asperiores repellendus debitis eligendi dolorum ipsum illum
+        recusandae sint possimus quisquam suscipit modi molestiae libero adipisci veritatis nemo neque perferendis
+        consectetur reprehenderit ut. Delectus laudantium adipisci, hic necessitatibus quod, amet impedit quaerat illum,
+        nam porro sapiente sunt magni repudiandae autem rerum. Illo quasi maxime harum, ea dolorum quod rerum facere
+        quis facilis maiores magnam, architecto ut commodi natus minus? Unde rem tempora ducimus molestias ratione
+        magnam, quae voluptate vel illum ab cum quaerat quibusdam aliquid officiis veritatis! Rem, sint placeat mollitia
+        voluptatibus veniam ut saepe velit veritatis repellat quibusdam obcaecati sed eveniet culpa incidunt, expedita
+        delectus corporis quod repudiandae totam? Eaque quidem natus nesciunt est nam eum in reprehenderit sapiente.
+        Delectus, accusantium quasi. Enim commodi esse in provident ex molestias obcaecati sequi aperiam voluptas magnam
+        unde facilis, mollitia laudantium dolorum expedita totam perferendis eos neque recusandae temporibus odit!
+        Delectus quia id amet dolore omnis doloremque ad nobis perspiciatis rerum, distinctio, ratione sunt ut quaerat.
+        Voluptates voluptatem omnis dolorum error delectus nemo labore aliquam, ipsa suscipit sed sint ducimus quos
+        tempora, consectetur velit? Alias tempora reiciendis nam odio inventore est suscipit hic veritatis. Sapiente,
+        fugit odit. Voluptates, harum, eligendi sint hic impedit sunt minima et voluptatum eveniet voluptatem non
+        obcaecati, dignissimos dicta?
+    </p>
+
+    <script>
+        function func(color) {
+            document.body.style.backgroundColor = color;
+            let text = document.getElementsByClassName('text');
+            if (color == '#000000') {
+                for (let elm of text) {
+                    elm.style.color = "white";
+                }
+            } else {
+                for (let elm of text) {
+                    elm.style.color = "black";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
